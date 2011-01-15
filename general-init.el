@@ -12,5 +12,5 @@
 
 ;; Git
 (add-to-list 'load-path (concat emacs-conf-dir "magit"))
-(require 'magit)
+(autoload 'magit-status "magit" nil t)
 ; (require 'magit-svn)
