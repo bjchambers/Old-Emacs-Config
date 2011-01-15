@@ -2,7 +2,8 @@
 (setq inhibit-splash-screen t)
 
 ;; Load sub-configs from this directory
-(add-to-list 'load-path 
-	     (file-name-directory (file-truename load-file-name)))
+(setq emacs-conf-dir (file-name-directory (file-truename load-file-name)))
+(add-to-list 'load-path emacs-conf-dir)
+
 (load-library "general-init")
 (load-library "python-init")

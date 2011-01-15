@@ -9,3 +9,8 @@
 ;; Auto completion
 (require 'auto-complete-config)
 (ac-config-default)
+
+;; Git
+(add-to-list 'load-path (concat emacs-conf-dir "magit"))
+(require 'magit)
+; (require 'magit-svn)
