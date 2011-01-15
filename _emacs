@@ -7,3 +7,4 @@
 
 (load-library "general-init")
 (load-library "python-init")
+(load-library "haskell-init")
