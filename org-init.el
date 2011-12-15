@@ -1,0 +1,26 @@
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key (kbd "C-c c") 'org-insert-todo-heading)
+(setq org-agenda-custom-commands
+      '(("x" tags-tree "-done")
+	("d" tags-tree "done")
+	))
+(setq org-use-speed-commands t)
+(setq org-startup-indented t)
+
+(add-hook 'org-mode-hook
+	  '(lambda ()
+	     (define-key org-mode-map "\C-j" nil)
+	     (define-key org-mode-map "\C-k" nil)
+	     (define-key org-mode-map "\C-p" 'org-kill-line)
+	    ))
+'(org-disputed-keys
+   (quote (([(shift up)] . [(meta p)])
+	   ([(shift down)] . [(meta n)])
+	   ([(shift left)] . [(meta -)])
+	   ([(shift right)] . [(meta +)])
+	   ([(control shift right)] . [(meta shift +)])
+	   ([(control shift left)] . [(meta shift -)])
+	  )))
+'(org-replace-disputed-keys t)
