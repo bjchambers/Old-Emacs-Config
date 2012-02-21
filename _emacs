@@ -16,4 +16,33 @@
 
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-subtle-hacker)
+
+;; Allow for full-screen
+(defun set-full-screen ()
+  (modify-frame-parameters nil
+   `((old-fullscreen . ,(frame-parameter nil 'fullscreen))
+     (old-height . ,(frame-parameter nil 'height))
+     (old-width . ,(frame-parameter nil 'width))
+     (old-left . ,(frame-parameter nil 'left))
+     (old-top . ,(frame-parameter nil 'top))
+     (fullscreen . fullboth))))
+
+(defun unset-full-screen ()
+  (modify-frame-parameters nil
+   `((fullscreen . ,(frame-parameter nil 'old-fullscreen))
+     (height . ,(frame-parameter nil 'old-height))
+     (width . ,(frame-parameter nil 'old-width))
+     (left . ,(frame-parameter nil 'old-left))
+     (top . ,(frame-parameter nil 'old-top)))))
+
+(defun toggle-full-screen ()
+  "Toggles full-screen mode and the bars"
+  (interactive)
+  (menu-bar-mode)
+  (tool-bar-mode)
+  (scroll-bar-mode)
+
+  (if (equal 'fullboth (frame-parameter nil 'fullscreen))
+      (unset-full-screen)
+      (set-full-screen)))
+(global-set-key [f11] 'toggle-full-screen)

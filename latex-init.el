@@ -5,4 +5,4 @@
 (setq-default TeX-master nil)
 
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/tex-utils")
-(require 'xdvi-search)
+;(require 'xdvi-search)

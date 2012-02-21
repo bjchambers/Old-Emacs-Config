@@ -1,6 +1,5 @@
 ;; Enable yasnippet
 (yas/initialize)
-(yas/load-directory "/usr/share/emacs/etc/yasnippet/snippets")
 
 ;; Disable tabs
 (setq-default indent-tabs-mode nil)
