@@ -15,3 +15,7 @@
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.py\\'" flymake-pyflakes-init)))
 (add-hook 'python-mode-hook 'flymake-mode)
+
+;; Setup pony mode
+(add-to-list 'load-path (concat emacs-conf-dir "pony-mode/src"))
+(require 'pony-mode)
