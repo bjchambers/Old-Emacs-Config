@@ -17,6 +17,7 @@
 
 (require 'color-theme)
 (color-theme-initialize)
+(color-theme-charcoal-black)
 
 ;; Allow for full-screen
 (defun set-full-screen ()
