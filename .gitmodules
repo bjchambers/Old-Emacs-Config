@@ -4,6 +4,6 @@
 [submodule "smex"]
 	path = smex
 	url = git://github.com/nonsequitur/smex.git
-[submodule "pony-mode"]
-	path = pony-mode
-	url = https://github.com/davidmiller/pony-mode
+[submodule "django-mode"]
+	path = django-mode
+	url = https://github.com/myfreeweb/django-mode.git
