@@ -13,6 +13,7 @@
 (load-library "org-init")
 (load-library "latex-init")
 (load-library "javascript-init")
+(load-library "python-init")
 
 (require 'color-theme)
 (color-theme-initialize)
