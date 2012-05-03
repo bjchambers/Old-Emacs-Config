@@ -14,6 +14,7 @@
 (load-library "latex-init")
 (load-library "javascript-init")
 (load-library "python-init")
+(load-library "markdown-init")
 
 (require 'color-theme)
 (color-theme-initialize)

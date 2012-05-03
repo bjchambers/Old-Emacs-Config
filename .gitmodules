@@ -7,3 +7,6 @@
 [submodule "pony-mode"]
 	path = pony-mode
 	url = git@github.com:bjchambers/pony-mode.git
+[submodule "markdown-mode"]
+	path = markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git
