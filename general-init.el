@@ -10,6 +10,9 @@
 (setq require-final-newline)
 (setq next-line-add-newlines nil)
 
+;; Show the fill column
+(require 'fill-column-indicator)
+
 ;; Show column numbers
 (column-number-mode)
 

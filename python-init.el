@@ -19,3 +19,8 @@
 ;; Setup pony mode
 (add-to-list 'load-path (concat emacs-conf-dir "pony-mode/src"))
 (require 'pony-mode)
+
+;; Show the 80 column fill line
+(add-hook 'python-mode-hook (lambda () 
+  (fci-mode)
+  (setq fci-rule-column 80)))
